@@ -1,12 +1,26 @@
 import React from "react";
-import { View, useWindowDimensions, Text } from "react-native";
+import {
+  View,
+  useWindowDimensions,
+  Text,
+  TouchableOpacity,
+} from "react-native";
 import { stylesFactory } from "./style";
+import { useNavigation } from "@react-navigation/native";
 const Home = () => {
+  const { navigate } = useNavigation();
   const { width } = useWindowDimensions();
   const styles = stylesFactory(width);
   return (
     <View style={styles.card}>
-      <Text>Hello</Text>
+      <TouchableOpacity
+        onPress={() =>
+          // dispatch(DrawerActions.openDrawer())
+          navigate("Details")
+        }
+      >
+        <Text>Home</Text>
+      </TouchableOpacity>
     </View>
   );
 };

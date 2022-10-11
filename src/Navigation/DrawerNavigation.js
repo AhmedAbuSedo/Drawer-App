@@ -15,22 +15,22 @@ const DrawerNavigation = () => {
       <Drawer.Navigator
         initialRouteName="Home"
         screenOptions={{ drawerPosition: "left", drawerType: "back" }}
-        drawerContent={({ navigation }) => {
-          return (
-            <TouchableOpacity
-              style={{
-                flex: 1,
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-              onPress={() => navigation.navigate("Details")}
-            >
-              <View>
-                <Text>Details</Text>
-              </View>
-            </TouchableOpacity>
-          );
-        }}
+        // drawerContent={({ navigation }) => {
+        //   return (
+        //     <TouchableOpacity
+        //       style={{
+        //         flex: 1,
+        //         justifyContent: "center",
+        //         alignItems: "center",
+        //       }}
+        //       onPress={() => navigation.navigate("Details")}
+        //     >
+        //       <View>
+        //         <Text>Details</Text>
+        //       </View>
+        //     </TouchableOpacity>
+        //   );
+        // }}
       >
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Details" component={Details} />
